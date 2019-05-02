@@ -1,13 +1,21 @@
 ﻿
 # The Change of Bitcoin Price Efficiency—A Dynamic Method and Multi-exchange Data
 ## Abstract
+<<<<<<< HEAD
 This paper uses DFA method to calculate Hurst exponent. Additionally, this paper takes the advantage of rolling window method with BDS test for each window to test the robustness of DFA method. Furthermore, this paper has three findings: 
+=======
+
+$$softmax(x_i) = \frac {e^{x_i}}{\sum_{j=0}^N{e^x_j}}$$
+
+  This paper uses DFA method to calculate Hurst exponent. Additionally, this paper takes the advantage of rolling window method with BDS test for each window to test the robustness of DFA method. Furthermore, this paper has three findings: 
+>>>>>>> 37fbb9132a9a355547f560a54784d18e95fb6ccb
 
  1. The distribution of the return of Bitcoin is approximate to normal distribution since the middle of 2017.
  2. The Bitcoin market is an inefficient market in short period and the inefficiency will weaken if you hold Bitcoin for a longer period.
  3. The inefficiency weakens since the big fluctuations of Bitcoin price around 2016.7.31.
 
 ## 1. Introduction
+<<<<<<< HEAD
 Bitcoin was created by Satoshi Nakamoto in 2009 and it has received a lot of attention from the world because of the great price fluctuations (Nakamoto, 2008). Chan, Le and Wu (2019) wrote that Bitcoin could hedge against S&P 500, Shanghai A-Share, Nikkei, TSX Index and Euro STOXX under monthly frequency. Bouri et al. (2017) revealed that Bitcoin was a good diversifier which could hedge against Asia Pacific stocks. Dyhrberg (2016) suggested that Bitcoin shared some hedging abilities with gold. As time goes by, Bitcoin is increasingly becoming a popular investment choice. Therefore, whether the price of Bitcoin is efficient is causing more and more discussion because investors want to know how to predict price.
 
 The efficient market hypothesis (EMH) is the basic theory used to analyze market efficiency (Fama,1970). Fama divides the efficient market into three levels: The Weak-Form EMH, The Semi-Strong-Form EMH and The Strong-Form EMH. In the Weak-Form EMH, all previous price information has been reflected in the current price, technical analysis is invalid; In the Semi-Strong-Form EMH, fundamental analysis relying on public information such as financial statements is also invalid; in the Strong-Form EMH, the people who have inside information are also unable to obtain sustained abnormal returns.
@@ -20,6 +28,17 @@ This paper has two innovative points. Firstly, we combine the Hurst exponent, DF
 
 The efficient market hypothesis (EMH) is the basic theory used to analyze market efficiency (Fama,1970). Fama divides the efficient market into three levels: The Weak-Form EMH, The Semi-Strong-Form EMH and The Strong-Form EMH. In the Weak-Form EMH, all previous price information has been reflected in the current price, technical analysis is invalid; In the Semi-Strong-Form EMH, fundamental analysis relying on public information such as financial statements is also invalid; in the Strong-Form EMH, the people who have inside information are also unable to obtain sustained abnormal returns.  
 
+=======
+Bitcoin was created by Satoshi Nakamoto in 2009 and it has received a lot of attention from the world because of the great price fluctuations (Nakamoto, 2008). Chan, Le and Wu (2019) wrote that Bitcoin could hedge against S&P 500, Shanghai A-Share, Nikkei, TSX Index and Euro STOXX under monthly frequency. Bouri et al. (2017) revealed that Bitcoin was a good diversifier which could hedge against Asia Pacific stocks. Dyhrberg (2016) suggested that Bitcoin shared some hedging abilities with gold. As time goes by, Bitcoin is increasingly becoming a popular investment choice. Therefore, whether the price of Bitcoin is efficient is causing more and more discussion because investors want to know how to predict price.  
+  
+The efficient market hypothesis (EMH) is the basic theory used to analyze market efficiency (Fama,1970). Fama divides the efficient market into three levels: The Weak-Form EMH, The Semi-Strong-Form EMH and The Strong-Form EMH. In the Weak-Form EMH, all previous price information has been reflected in the current price, technical analysis is invalid; In the Semi-Strong-Form EMH, fundamental analysis relying on public information such as financial statements is also invalid; in the Strong-Form EMH, the people who have inside information are also unable to obtain sustained abnormal returns.  
+
+According to the research of Urquhart (2016), the returns of Bitcoin are significantly inefficient in general but the market is more efficient in the latter period. Nadarajah and Chu (2017) reveals that the Bitcoin returns satisfy the requirements of Weak-Form EMH with using eight various tests. Bariviera (2017) is the first to use Hurst exponent in the research about Bitcoin price efficiency and it found that DFA method was much more precise. Tiwari et al. (2018) supported their results with using a long-range efficient estimator of dependence. Jiang, Nie and Ruan (2018) suggested that the Hurst exponents of Bitcoin market were higher than 0.5, Bitcoin market was inefficient and it did not develop more and more efficiently, and rolling window approach could improve the results. Vidal-Tomás (2018) was the first one to analyze the Semi-Strong-Form EMH of Bitcoin and revealed that Bitcoin would not respond to monetary policy news and Bitcoin Market has become more efficient in relation to its own events. Sensoy (2019) proved that the price efficiency has improved in the recent years.  
+
+We aim to analyze the change of Bitcoin Price Efficiency since the birth of Bitcoin and initially explore what causes the price efficiency change. Additionally, this paper will compare the different Bitcoin Price Efficiency among different exchanges. 
+
+This paper has two innovative points. Firstly, we combine the Hurst exponent, DFA method and rolling window approach together to get the accurate description of Bitcoin Price Efficiency in a dynamic way with BDS test. Secondly, this article will establish a horizontal comparison of the Bitcoin Price Efficiency of different exchanges in different time periods.
+>>>>>>> 37fbb9132a9a355547f560a54784d18e95fb6ccb
 ## 2. Methodology
 ### 2.1 Hurst Exponent
 A system with Hurst statistical properties does not require independent random event hypotheses like general probability statistics. It reflects the results of a long series of interrelated events. It fits well with the theory and methods we need to analyze capital markets. We use H to represent Hurst Exponent and it has three forms:
@@ -30,6 +49,7 @@ A system with Hurst statistical properties does not require independent random e
 
 ### 2.2 DFA Method
 We use detrended fluctuation analysis (DFA) to analyze the data of Bitcoin. Compared with the traditional methods like Spectral Analysis and Hurst Analysis, DFA has two advantages:
+<<<<<<< HEAD
 (1) DFA can detect intrinsic self-similarity in a time series that appears to be non-stationary on the surface.
 (2) DFA can avoid the detection of obvious self-similarity due to external trends, and eliminate the pseudo-correlation phenomenon in artificially synthesized non-stationary time series. When we consider a time series $\left\{x_i,\ i=1,2,\ldots,\ N\right\}$ and N is the length of the time series. The steps to eliminate the trend of fluctuation analysis are as follows:
 (1)Integrate the data in the sequence:
@@ -40,6 +60,22 @@ where $\bar{x}$ is the average of sequence.
 (3)For a given N, we subtract the trend signal from the integrated signal to obtain the fluctuation signal.
 $$F\left(n\right)=\sqrt{\frac{1}{n}\sum_{k=1}^{N}\left[y\left(k\right)-y_n\left(k\right)\right]^2}$$
 If  $F\left(n\right)\propto n^\alpha$, time series has the property of Fractal. In the double logarithmic coordinate system, we plot the curve of $\ln{\left(F\left(n\right)\right)} $and $\ln{\left(n\right)}$. After that, we do the linear fitting to get the slope $\alpha$ which is the Hurst exponent or DFA exponent.
+=======
+
+（1）DFA can detect intrinsic self-similarity in a time series that appears to be non-stationary on the surface.
+
+（2）DFA can avoid the detection of obvious self-similarity due to external trends, and eliminate the pseudo-correlation phenomenon in artificially synthesized non-stationary time series.
+
+When we consider a time series {x_i, i=1,2,...N} and N is the length of the time series. The steps to eliminate the trend of fluctuation analysis are as follows:
+	Integrate the data in the sequence:
+        ![function1](/picture/function1.png "function1")
+\bar{x} is the average of sequence.
+	The integrated signals of the sequence are equally divided into n cells, and then each interval is linearly fitted by the least squares method to obtain a trend signal y_n\left(k\right),\ k=1,2\ldots,N.
+	For a given N, we subtract the trend signal from the integrated signal to obtain the fluctuation signal.
+F\left(n\right)=\sqrt{\frac{1}{n}\sum_{k=1}^{N}\left[y\left(k\right)-y_n\left(k\right)\right]^2}
+If  F\left(n\right)\propto n^\alpha, time series has the property of Fractal. In the double logarithmic coordinate system, we plot the curve of \ln{\left(F\left(n\right)\right)} and \ln{\left(n\right)}. After that, we do the linear fitting to get the slope \alpha which is the Hurst exponent or DFA exponent.
+
+>>>>>>> 37fbb9132a9a355547f560a54784d18e95fb6ccb
 ### 2.3 Rolling Window Approach
 We use Size to represent the size of the window and Step means the step size of the window. After calculating the Hurst exponent of each window, we will abandon the first Step size of returns in the window and the next Step size of returns after the window will be appended at the end of the window while keeping the Size constant. 
 
