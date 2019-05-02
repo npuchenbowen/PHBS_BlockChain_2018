@@ -1,5 +1,8 @@
 # The Change of Bitcoin Price Efficiency—A Dynamic Method and Multi-exchange Data
 ## Abstract
+
+$$softmax(x_i) = \frac {e^{x_i}}{\sum_{j=0}^N{e^x_j}}$$
+
   This paper uses DFA method to calculate Hurst exponent. Additionally, this paper takes the advantage of rolling window method with BDS test for each window to test the robustness of DFA method. Furthermore, this paper has three findings: 
 
   (1) The distribution of the return of Bitcoin is approximate to normal distribution since the middle of 2017. 
