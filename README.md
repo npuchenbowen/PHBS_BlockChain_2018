@@ -94,10 +94,12 @@ In Figure 3, this paper shows the DFA exponent for Bitcoin daily returns in diff
 When we analyze the efficiency of Coinbase Exchange, we divide the whole period into two periods. The first one is before the skyrocketing of Bitcoin and the other one is after the skyrocketing. Table 2 shows that the Bitcoin in Coinbase Exchange is an inefficient market overall but the inefficiency weakens after skyrocketing around 2016.7.31. Table 3 show that the Bitcoin in Exmo Exchange is an inefficiency market and is is more inefficient than the other two Exchanges which is similar to DFA method. However, in Table 4, we can not prove that Bitcoin in Binance Exchange is an inefficient market. Therefore, the Bitcoin market is an inefficient market overall and the inefficiency weakens since the big fluctuations of Bitcoin price around 2016.7.31. This is related with the increasing of liquidity because Bitcoin attracts more attention from the global investors (Urquhart, 2016).
 
 Table 2: The BDS test for the return of Bitcoin in Coinbase Exchange
-Time Period	Time window	Day shift	Sig.windows(1%)	Sig.window(5%)	Total windows	Ineff.ratio(1%)	Ineff.ratio(5%)
-2013.4.29-2016.7.31	500	7	99	0	99	100%	100%
-2016.7.31-2019.4.29	500	7	52	20	72	72.22%	100%
-2013.4.29-2019.4.26	500	7	222	20	242	91.7355%	100%
+
+Time Period|Time window	Day shift|Sig.windows(1%)|Sig.window(5%)|Total windows|Ineff.ratio(1%)|Ineff.ratio(5%)
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+2013.4.29-2016.7.31|500|7|99|0|99|100%|100%
+2016.7.31-2019.4.29|500|7|52|20|72|72.22%|100%
+2013.4.29-2019.4.26|500|7|222|20|242|91.7355%|100%
 Notes: Time window means the Size of the Window; Day shift means the step of the window; Sig.windows (1%) means that the number of windows which are inefficient at a level of 1% significance; Sig.window (5%) means that the number of windows which are inefficient at a level of 5% significance; Total windows means the total number of windows; \mathbf{Ineff}.\mathbf{ratio}\ (\mathbf{1}%)\ =\mathbf{Sig}.\mathbf{windows}\ (\mathbf{1}%)/\mathbf{Total}\ \mathbf{windows}; \mathbf{Ineff}.\mathbf{ratio}(\mathbf{5}%)=\mathbf{Sig}.\mathbf{window}\ (\mathbf{5}%)/\mathbf{Total}\ \mathbf{windows}.
 
 
