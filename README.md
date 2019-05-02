@@ -100,16 +100,21 @@ Time Period|Time window	Day shift|Sig.windows(1%)|Sig.window(5%)|Total windows|I
 2013.4.29-2016.7.31|500|7|99|0|99|100%|100%
 2016.7.31-2019.4.29|500|7|52|20|72|72.22%|100%
 2013.4.29-2019.4.26|500|7|222|20|242|91.7355%|100%
+
 Notes: Time window means the Size of the Window; Day shift means the step of the window; Sig.windows (1%) means that the number of windows which are inefficient at a level of 1% significance; Sig.window (5%) means that the number of windows which are inefficient at a level of 5% significance; Total windows means the total number of windows; \mathbf{Ineff}.\mathbf{ratio}\ (\mathbf{1}%)\ =\mathbf{Sig}.\mathbf{windows}\ (\mathbf{1}%)/\mathbf{Total}\ \mathbf{windows}; \mathbf{Ineff}.\mathbf{ratio}(\mathbf{5}%)=\mathbf{Sig}.\mathbf{window}\ (\mathbf{5}%)/\mathbf{Total}\ \mathbf{windows}.
 
 
 Table 3: The BDS test for the return of Bitcoin in Exmo Exchange
-Time Period	Time window	Day shift	Sig.windows(1%)	Sig.window(5%)	Total windows	Ineff.ratio(1%)	Ineff.ratio(5%)
-2016.3.5-2019.4.26	500	7	144	0	144	100%	100%
+
+Time Period|Time window	Day shift|Sig.windows(1%)|Sig.window(5%)|Total windows|Ineff.ratio(1%)|Ineff.ratio(5%)
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+2016.3.5-2019.4.26|500|7|144|0|144|100%|100%
 
 Table 4: The BDS test for the return of Bitcoin in Binance Exhchange
-Time Period	Time window	Day shift	Sig.windows(1%)	Sig.window(5%)	Total windows	Ineff.ratio(1%)	Ineff.ratio(5%)
-2017.8.19-2019.4.26	500	7	2	3	17	11.76%	29.41%
+
+Time Period|Time window	Day shift|Sig.windows(1%)|Sig.window(5%)|Total windows|Ineff.ratio(1%)|Ineff.ratio(5%)
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+2017.8.19-2019.4.26|500|7|2|3|17|11.76%|29.41%
 
 ## 4. Conclusion
 This paper’s data is based on the Coinbase, Exmo and Binance Exchanges. In the analysis of the descriptive statistics characters of the data, we found that the distribution of the return series of Bitcoin is close to normal distribution and it can help Bitcoin investors to predict the future price of Bitcoin in different exchanges. In the part of DFA analysis, we indicated that the Bitcoin market was an inefficient market overall because that the DFA exponent was always larger than 0.5. At the same time, when we enlarged the size of rolling window method, we found  that the DFA exponent was declining which meant that the Bitcoin market would become less inefficient when  investors held it for a longer time. Therefore, we recommends that the investors can buy the Bitcoin when the price is increasing and sell the Bitcoin when the price is decreasing in the short period. Additionally, we do not suggest that the investors should hold Bitcoin for a long time because they will face larger risk and uncertainty. In the part about BDS test, it supports our findings that the Bitcoin market is an inefficient market overall. What’s more, it suggests that the inefficiency weakens since the big fluctuations of Bitcoin price in 2016.7.31 which can also slightly supported by DFA exponent analysis. 
