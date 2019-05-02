@@ -25,7 +25,7 @@ A system with Hurst statistical properties does not require independent random e
 
 （2）If 0.5<H<1, it means that the time series has long-term memory. For example, high values may follow another high value and the trend will continue for a long time.
 	
-（3）If 0\leH\le0.5, it represents the Mean-Reverting Process which means the process of switching between high and low values for a long time. For example, a single high value may be followed by a low value, after which the value will tend to be very high.
+（3）If 0≤H≤0.5, it represents the Mean-Reverting Process which means the process of switching between high and low values for a long time. For example, a single high value may be followed by a low value, after which the value will tend to be very high.
 
 ### 2.2 DFA Method (Peng et al., 1995)
 ### 2.3 Rolling Window Approach
