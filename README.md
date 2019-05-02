@@ -45,20 +45,20 @@ We use Size to represent the size of the window and Step means the step size of 
 
 With the rolling of window, we will conduct BDS test (Brock, Dechert and Scheinkman, 1987) to check if the bitcoin market is efficient. It is used to test whether a series of observations over a period of time are independent identically distributed. It can not only test high-order correlations, but also detect nonlinear correlations. Assume that the null hypothesis is {{H}_0:x_t\ is\ i.i.d.,t=1,2,\ldots,n}. There is an m-dimensional vector x_t^m\ =\ (x_{t-m+1},...,x_t) and N=\ t-m+1. 
 
-C(N,m,r)=\frac{2}{N(N-1)}t<sH(r-xtm-xsm)
+$$C(N,m,r)=\frac{2}{N(N-1)}t<sH(r-xtm-xsm)$$
 
 where H\left(z\right)=0,\ when\ z\le\ 0 and H(z)=1 when z>0. The statistics of BDS:
 
-W(N,m,r)=\sqrt N\frac{C(N,m,r)-{C(N,1,r)}^m}{\hat{\sigma}(N,m,r)}
+$$W(N,m,r)=\sqrt N\frac{C(N,m,r)-{C(N,1,r)}^m}{\hat{\sigma}(N,m,r)}$$
 
-where \hat{\sigma}(N,m,r) is the progressive standard deviation estimation of C(N,m,r)-{C(N,1,r)}^m. 
+where $\hat{\sigma}(N,m,r)$ is the progressive standard deviation estimation of $C(N,m,r)-{C(N,1,r)}^m$. 
 
 
 ## 3. Data and Results
 This paper uses the BTC/USD daily data from Coinbase, Exmo, and Binance exchanges which are one of the biggest Bitcoin exchanges in the world. We download the data of Exmo and Binance from the website: https://www.cryptodatadownload.com/ and we download the data of Coinbase from the website: https://coinmarketcap.com/currencies/bitcoin/historical-data/ .
 We calculate the Bitcoin Price Return as:
 
-R_t=\ln{\left(\frac{P_t}{P_{t-1}}\right)}\times100
+$$R_t=\ln{\left(\frac{P_t}{P_{t-1}}\right)}\times100$$
 
 where R_t is the return of Bitcoin and P_t and P_{t-1} represent the Bitcoin price at time t and t-1. From the Figure one and Figure 2, we can know that Bitcoin prices are slightly different in different exchanges, but the overall trend is the same. Bitcoin experienced a huge crash in 2018 and entered a period of sharp fluctuations. The price of Bitcoin rose slightly in 2019.  
 ![Figure 1：The Bitcoin Price in Coinbase, Exmo, Binance Exchanges overall](/picture/price_all.png "Figure 1：The Bitcoin Price in Coinbase, Exmo, Binance Exchanges overall")
@@ -82,7 +82,7 @@ R_t of Coinbase|2017.8.18-2019.4.26|616|0.0387|4.4387|22.5119|-20.7530|3.5997|-0
 ln\left(P_t\right) of Exmo|2017.8.18-2019.4.26|617|8.7700|0.4125|9.8679|8.0994|-0.3677|0.4381|
 R_t of Exmo|2017.8.18-2019.4.26|616|0.0425|3.9924|19.0235|-18.0279|4.0970|-0.0375|
 ln\left(P_t\right) of Binance|2017.8.18-2019.4.26|617|8.7541|0.4077|9.8576|8.0675|-0.4340|0.3451|
-R_t of Binance|2017.8.18-2019.4.26|616|0.0415|4.4975|20.2952|-21.6880|3.4366|-0.2563|
+$R_t$ of Binance|2017.8.18-2019.4.26|616|0.0415|4.4975|20.2952|-21.6880|3.4366|-0.2563|
 
 In Figure 3, this paper shows the DFA exponent for Bitcoin daily returns in different sizes and steps. Firstly, the DFA exponent is larger than 0.5 in all three Exchanges and it means that there exists long-term memory in the Bitcoin return time series. Secondly, with the increasing of size, the DFA exponent declines and becomes less volatile than using the small size. When we increase the size larger than 300, the DFA exponent is close to 0.5 which indicates that it can nearly be described by random walks. In the long run, Exmo’s DFA exponent is higher than the other two exchanges and it means more inefficient. Additionally, we did a robustness test by changing the step of the rolling window method and the result is the same.
 
