@@ -19,6 +19,14 @@
   This paper has two innovative points. Firstly, we combine the Hurst exponent, DFA method and rolling window approach together to get the accurate description of Bitcoin Price Efficiency in a dynamic way with BDS test. Secondly, this article will establish a horizontal comparison of the Bitcoin Price Efficiency of different exchanges in different time periods.
 ## 2. Methodology
 ### 2.1 Hurst Exponent
+A system with Hurst statistical properties does not require independent random event hypotheses like general probability statistics. It reflects the results of a long series of interrelated events. It fits well with the theory and methods we need to analyze capital markets. We use H to represent Hurst Exponent and it has three forms:
+
+（1）H = 0.5, it represents a completely unrelated sequence and means that time series can be described by random walks.
+
+（2）If 0.5<H<1, it means that the time series has long-term memory. For example, high values may follow another high value and the trend will continue for a long time.
+	
+（3）If 0\leH\le0.5, it represents the Mean-Reverting Process which means the process of switching between high and low values for a long time. For example, a single high value may be followed by a low value, after which the value will tend to be very high.
+
 ### 2.2 DFA Method (Peng et al., 1995)
 ### 2.3 Rolling Window Approach
 ## 3. Data and Results
