@@ -1,6 +1,6 @@
 # The Change of Bitcoin Price Efficiency—A Dynamic Method and Multi-exchange Data
 ## Abstract
-     This paper uses DFA method to calculate Hurst exponent. Additionally, this paper takes the advantage of rolling window method with BDS test for each window to test the robustness of DFA method. Furthermore, this paper has three findings: (1) The distribution of the return of Bitcoin is approximate to normal distribution since the middle of 2017. (2) The Bitcoin market is an inefficient market in short period and the inefficiency will weaken if you hold Bitcoin for a longer period. (3) The inefficiency weakens since the big fluctuations of Bitcoin price around 2016.7.31. 
+ This paper uses DFA method to calculate Hurst exponent. Additionally, this paper takes the advantage of rolling window method with BDS test for each window to test the robustness of DFA method. Furthermore, this paper has three findings: (1) The distribution of the return of Bitcoin is approximate to normal distribution since the middle of 2017. (2) The Bitcoin market is an inefficient market in short period and the inefficiency will weaken if you hold Bitcoin for a longer period. (3) The inefficiency weakens since the big fluctuations of Bitcoin price around 2016.7.31. 
 ## 1. Introduction
 ## 2. Methodology
 ### 2.1 Hurst Exponent
