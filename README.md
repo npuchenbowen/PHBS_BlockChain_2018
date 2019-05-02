@@ -39,6 +39,7 @@ where $\bar{x}$ is the average of sequence.
 (3)For a given N, we subtract the trend signal from the integrated signal to obtain the fluctuation signal.
 $$F\left(n\right)=\sqrt{\frac{1}{n}\sum_{k=1}^{N}\left[y\left(k\right)-y_n\left(k\right)\right]^2}$$
 If  $F\left(n\right)\propto n^\alpha$, time series has the property of Fractal. In the double logarithmic coordinate system, we plot the curve of $\ln{\left(F\left(n\right)\right)} $and $\ln{\left(n\right)}$. After that, we do the linear fitting to get the slope $\alpha$ which is the Hurst exponent or DFA exponent.
+
 ### 2.3 Rolling Window Approach
 We use Size to represent the size of the window and Step means the step size of the window. After calculating the Hurst exponent of each window, we will abandon the first Step size of returns in the window and the next Step size of returns after the window will be appended at the end of the window while keeping the Size constant. 
 
@@ -55,9 +56,9 @@ We calculate the Bitcoin Price Return as:
 $$R_t=\ln{\left(\frac{P_t}{P_{t-1}}\right)}\times100$$
 where $R_t$ is the return of Bitcoin and $P_t$ and $P_{t-1}$ represent the Bitcoin price at time $t$ and $t-1$. From the Figure one and Figure 2, we can know that Bitcoin prices are slightly different in different exchanges, but the overall trend is the same. Bitcoin experienced a huge crash in 2018 and entered a period of sharp fluctuations. The price of Bitcoin rose slightly in 2019.  
  
-![Figure 1：The Bitcoin Price in Coinbase, Exmo, Binance Exchanges overall][1]
+![Figure 1：The Bitcoin Price in Coinbase, Exmo, Binance Exchanges overall][ https://github.com/npuchenbowen/PHBS_BlockChain_2018/tree/master/picture/price_all.png]
 
-![Figure 2: The Bitcoin Price in Coinbase, Exmo, Binance Exchanges since 2017.8.18 ][2]
+![Figure 2: The Bitcoin Price in Coinbase, Exmo, Binance Exchanges since 2017.8.18 ][https://github.com/npuchenbowen/PHBS_BlockChain_2018/tree/master/picture/price_recent.png]
 
 Table 1 show that the statistical characteristics of different exchanges tend to be similar. We can see that the $\ln{\left(P_t\right)}$ in Coinbase, Exmo and Binance has negative Kurtosis and positive Skewness which means that the concentration of $\ln{\left(P_t\right)}$ is not high and there are some extremely high values. The $R_t$ in Coinbase, Exmo and Binance Exchanges has positive Kurtosis which is slightly larger than $3$ and negative Skewness which is close to zero. Therefore, the distribution of $R_t$ is approximate to normal distribution. Additionally, the standard deviation of $R_t$ in Exmo is lower than $R_t$ in Coinbase and Binance. Therefore, Exmo is less risky than the other two Exchanges and investors with different risk tolerances can invest in different exchanges. 
 
@@ -75,7 +76,7 @@ Table 1 show that the statistical characteristics of different exchanges tend to
 
 In Figure 3, this paper shows the DFA exponent for Bitcoin daily returns in different sizes and steps. Firstly, the DFA exponent is larger than 0.5 in all three Exchanges and it means that there exists long-term memory in the Bitcoin return time series. Secondly, with the increasing of size, the DFA exponent declines and becomes less volatile than using the small size. When we increase the size larger than 300, the DFA exponent is close to 0.5 which indicates that it can nearly be described by random walks. In the long run, Exmo’s DFA exponent is higher than the other two exchanges and it means more inefficient. Additionally, we did a robustness test by changing the step of the rolling window method and the result is the same. 
  
- ![Figure 3: The DFA exponent for Bitcoin daily returns in different sizes and steps][3]
+ ![Figure 3: The DFA exponent for Bitcoin daily returns in different sizes and steps][https://github.com/npuchenbowen/PHBS_BlockChain_2018/tree/master/picture/dfa.jpg]
 
 When we analyze the efficiency of Coinbase Exchange, we divide the whole period into two periods. The first one is before the skyrocketing of Bitcoin and the other one is after the skyrocketing. Table 2 shows that the Bitcoin in Coinbase Exchange is an inefficient market overall but the inefficiency weakens after skyrocketing around 2016.7.31. Table 3 show that the Bitcoin in Exmo Exchange is an inefficiency market and is is more inefficient than the other two Exchanges which is similar to DFA method. However, in Table 4, we can not prove that Bitcoin in Binance Exchange is an inefficient market. Therefore, the Bitcoin market is an inefficient market overall and the inefficiency weakens since the big fluctuations of Bitcoin price around 2016.7.31. This is related with the increasing of liquidity because Bitcoin attracts more attention from the global investors (Urquhart, 2016).
 
