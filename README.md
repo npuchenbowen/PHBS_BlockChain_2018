@@ -28,6 +28,18 @@ A system with Hurst statistical properties does not require independent random e
 （3）If 0≤H≤0.5, it represents the Mean-Reverting Process which means the process of switching between high and low values for a long time. For example, a single high value may be followed by a low value, after which the value will tend to be very high.
 
 ### 2.2 DFA Method (Peng et al., 1995)
+We use detrended fluctuation analysis (DFA) to analyze the data of Bitcoin. Compared with the traditional methods like Spectral Analysis and Hurst Analysis, DFA has two advantages:
+	DFA can detect intrinsic self-similarity in a time series that appears to be non-stationary on the surface.
+	DFA can avoid the detection of obvious self-similarity due to external trends, and eliminate the pseudo-correlation phenomenon in artificially synthesized non-stationary time series.
+When we consider a time series \left\{x_i,\ i=1,2,\ldots,\ N\right\} and N is the length of the time series. The steps to eliminate the trend of fluctuation analysis are as follows:
+	Integrate the data in the sequence:
+y\left(k\right)=\sum_{i=1}^{k}{(x_i}-\bar{x}\ )\left(k=1,2,\ldots,N\right)
+\bar{x} is the average of sequence.
+	The integrated signals of the sequence are equally divided into n cells, and then each interval is linearly fitted by the least squares method to obtain a trend signal y_n\left(k\right),\ k=1,2\ldots,N.
+	For a given N, we subtract the trend signal from the integrated signal to obtain the fluctuation signal.
+F\left(n\right)=\sqrt{\frac{1}{n}\sum_{k=1}^{N}\left[y\left(k\right)-y_n\left(k\right)\right]^2}
+If  F\left(n\right)\propto n^\alpha, time series has the property of Fractal. In the double logarithmic coordinate system, we plot the curve of \ln{\left(F\left(n\right)\right)} and \ln{\left(n\right)}. After that, we do the linear fitting to get the slope \alpha which is the Hurst exponent or DFA exponent.
+
 ### 2.3 Rolling Window Approach
 ## 3. Data and Results
 ## 4. Conclusion
