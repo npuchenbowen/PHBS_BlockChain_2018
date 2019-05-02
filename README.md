@@ -44,17 +44,15 @@ If  F\left(n\right)\propto n^\alpha, time series has the property of Fractal. In
 ## 3. Data and Results
 ![Figure 1：The Bitcoin Price in Coinbase, Exmo, Binance Exchanges overall](/picture/price_all.png "Figure 1：The Bitcoin Price in Coinbase, Exmo, Binance Exchanges overall")
 
-<center>Figure 1：The Bitcoin Price in Coinbase, Exmo, Binance Exchanges overall</center>
+<center> Figure 1：The Bitcoin Price in Coinbase, Exmo, Binance Exchanges overall </center>
 
 ![Figure 2: The Bitcoin Price in Coinbase, Exmo, Binance Exchanges since 2017.8.18](/picture/price_recent.png "Figure 2: The Bitcoin Price in Coinbase, Exmo, Binance Exchanges since 2017.8.18")
 
-<center>Figure 2: The Bitcoin Price in Coinbase, Exmo, Binance Exchanges since 2017.8.18</center>
+<center> Figure 2: The Bitcoin Price in Coinbase, Exmo, Binance Exchanges since 2017.8.18 </center>
 
 ![Figure 3: The DFA exponent for Bitcoin daily returns in different sizes and steps](/picture/dfa.jpg "Figure 3: The DFA exponent for Bitcoin daily returns in different sizes and steps")
 
-<center>Figure 3: The DFA exponent for Bitcoin daily returns in different sizes and steps</center>
-
-![daiMengXiaoerLang](http://upload-images.jianshu.io/upload_images/5726812-cbd59af7ef536d44.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+<center> Figure 3: The DFA exponent for Bitcoin daily returns in different sizes and steps </center>
 
 ## 4. Conclusion
 This paper’s data is based on the Coinbase, Exmo and Binance Exchanges. In the analysis of the descriptive statistics characters of the data, we found that the distribution of the return series of Bitcoin is close to normal distribution and it can help Bitcoin investors to predict the future price of Bitcoin in different exchanges. In the part of DFA analysis, we indicated that the Bitcoin market was an inefficient market overall because that the DFA exponent was always larger than 0.5. At the same time, when we enlarged the size of rolling window method, we found  that the DFA exponent was declining which meant that the Bitcoin market would become less inefficient when  investors held it for a longer time. Therefore, we recommends that the investors can buy the Bitcoin when the price is increasing and sell the Bitcoin when the price is decreasing in the short period. Additionally, we do not suggest that the investors should hold Bitcoin for a long time because they will face larger risk and uncertainty. In the part about BDS test, it supports our findings that the Bitcoin market is an inefficient market overall. What’s more, it suggests that the inefficiency weakens since the big fluctuations of Bitcoin price in 2016.7.31 which can also slightly supported by DFA exponent analysis. 
