@@ -1,3 +1,4 @@
+#This is used to calculate the DFA exponent of the return series of different Bitcoin Exchanges
 import numpy as np
 import matplotlib as mpl
 from matplotlib import pyplot as plt
@@ -7,15 +8,15 @@ import csv
 import pandas as pd
 import nolds
 
-filename = 'zhenghe_dfa.csv'
-size = 14
-step = 7
-H_coinbases,H_exmos,H_binances = [],[],[]
-Hdate_coinbases,Hdate_exmos,Hdate_binances = [],[],[]
+filename = 'all_the_return_data.csv'
+size = 100#remember the size of the rolling window
+step = 7#remember the step of the rolling window
+H_coinbases,H_exmos,H_binances = [],[],[]#remember the DFA exponent
+Hdate_coinbases,Hdate_exmos,Hdate_binances = [],[],[]#remember the Date
 temp = []
 flag_coinbase,flag_exmo,flag_binance = 0,0,0
 
-with open(filename) as f:
+with open(filename) as f:#remember the data
     reader = csv.reader(f)
     header_row = next(reader)
     dates,return_coinbases,return_exmos,return_binances = [],[],[],[]
@@ -44,6 +45,7 @@ with open(filename) as f:
             #    return_binance = None
             #    return_binances.append(return_binance)
 
+#calculating the DFA of coinbase exchange
 i = 0
 while((i + size) < len(return_coinbases)):
     temp1 = return_coinbases[i:i + size]
@@ -56,6 +58,7 @@ while((i + size) < len(return_coinbases)):
     flag_coinbase = flag_coinbase + 1
     i = i + step
 
+#calculating the DFA of exmo exchange
 j = 0
 while((j + size) < len(return_exmos)):
     temp2 = return_exmos[j:j + size]
@@ -68,6 +71,7 @@ while((j + size) < len(return_exmos)):
     flag_exmo=flag_exmo+1
     j=j+step  
     
+#calculating the DFA of binance exchange
 k = 0
 while((k + size) < len(return_binances)):
     temp3 = return_binances[k:k + size]
@@ -81,6 +85,7 @@ while((k + size) < len(return_binances)):
     k=k+step 
 
 
+#plot the figure of coinbase, exmo and binance exchanges
 plt.figure(figsize=(10,6))
 L1, = plt.plot(Hdate_coinbases,H_coinbases,'k')
 #L1, = plt.plot(Hdate_coinbases,H_coinbases,'ro')

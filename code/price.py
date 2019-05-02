@@ -1,3 +1,4 @@
+#plot the price change of coinbase,exmo and binance exchanges
 import numpy as np
 import matplotlib as mpl
 from matplotlib import pyplot as plt
@@ -6,7 +7,7 @@ from datetime import datetime
 import csv
 import pandas as pd
 
-filename = 'short.csv'
+filename = 'all_the_price_data.csv'
 with open(filename) as f:
     reader=csv.reader(f)
     header_row=next(reader)

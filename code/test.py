@@ -1,3 +1,4 @@
+#doing the BDS test for coinbase,exmo and binance Bitcoin exchange
 import numpy as np
 import matplotlib as mpl
 from matplotlib import pyplot as plt
@@ -13,17 +14,17 @@ from matplotlib.pylab import rcParams
 from statsmodels.tsa.stattools import adfuller
 from statsmodels.stats.diagnostic import acorr_ljungbox
 
-filename = 'houbanqi.csv'
-size = 500
-step = 7
-H_coinbases,H_exmos,H_binances = [],[],[]
-Hdate_coinbases,Hdate_exmos,Hdate_binances = [],[],[]
+filename = 'data_after_2016.7.31.csv'
+size = 500#remember the size of rolling window
+step = 7#remember the step of rolling window
+H_coinbases,H_exmos,H_binances = [],[],[]#remember the dfa exponent
+Hdate_coinbases,Hdate_exmos,Hdate_binances = [],[],[]#remember the date
 temp_date,temp_data = [],[]
 flag_coinbase,flag_exmo,flag_binance = 0,0,0
 h=()
-sig1=0
-sig5=0
-total=0
+sig1=0#The nubmer of window at the level of 1% significance
+sig5=0#The number of window at the lvel of 5% significance
+total=0#The total number of window
 
 def Ljung(temp_data,temp_date):
     dta=pd.Series(temp_data)
@@ -94,32 +95,34 @@ with open(filename) as f:
             #    return_binance = None
             #    return_binances.append(return_binance)
 
-#i = 0
-#while((i + size) < len(return_coinbases)):
-#    temp1 = return_coinbases[i:i + size]
-#    date1 = dates[i:i+size]
-#    dfa_coinbase = nolds.dfa(temp1)
-#    H_coinbases.append(dfa_coinbase)
-#    temp_coinbase_date = dates[i]
-#    Hdate_coinbases.append(temp_coinbase_date)
-#    Ljung(temp1,date1)
-#    flag_coinbase = flag_coinbase + 1
-#    i = i + step
+#calculating the bds test for coinbase exchange
+i = 0
+while((i + size) < len(return_coinbases)):
+    temp1 = return_coinbases[i:i + size]
+    date1 = dates[i:i+size]
+    dfa_coinbase = nolds.dfa(temp1)
+    H_coinbases.append(dfa_coinbase)
+    temp_coinbase_date = dates[i]
+    Hdate_coinbases.append(temp_coinbase_date)
+    Ljung(temp1,date1)
+    flag_coinbase = flag_coinbase + 1
+    i = i + step
 
-
-#j = 0
-#while((j + size) < len(return_exmos)):
-#    temp2 = return_exmos[j:j + size]
-#    date2=dates[j:j+size]
-#    dfa_exmo = nolds.dfa(temp2)
-#    Ljung(temp2,date2)
-#    H_exmos.append(dfa_exmo)
-#    temp_exmo_date=dates[j]
-#    Hdate_exmos.append(temp_exmo_date)
-#    flag_exmo=flag_exmo+1
-#    j=j+step  
-#    Ljung(temp2,date2)
+#calculating the bds test for exmo exchange
+j = 0
+while((j + size) < len(return_exmos)):
+    temp2 = return_exmos[j:j + size]
+    date2=dates[j:j+size]
+    dfa_exmo = nolds.dfa(temp2)
+    Ljung(temp2,date2)
+    H_exmos.append(dfa_exmo)
+    temp_exmo_date=dates[j]
+    Hdate_exmos.append(temp_exmo_date)
+    flag_exmo=flag_exmo+1
+    j=j+step  
+    Ljung(temp2,date2)
     
+#calculating the bds test for binance exchange
 k = 0
 while((k + size) < len(return_binances)):
     temp3 = return_binances[k:k + size]
@@ -151,6 +154,7 @@ while((k + size) < len(return_binances)):
 #plt.title('Size=365, Step=30')
 ##plt.show()
 
+#calculating the result
 print("sig.window 1 is %d"%sig1)
 print("sig.window 5 is %d"%sig5)
 print("total windows is %d"%total)
