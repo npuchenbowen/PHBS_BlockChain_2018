@@ -42,7 +42,7 @@ If  F\left(n\right)\propto n^\alpha, time series has the property of Fractal. In
 
 ### 2.3 Rolling Window Approach
 ## 3. Data and Results
-![Figure 1：The Bitcoin Price in Coinbase, Exmo, Binance Exchanges overall](/picture/price_all.png)
+![image1](/picture/price_all.png)
 ![Figure 2: The Bitcoin Price in Coinbase, Exmo, Binance Exchanges since 2017.8.18](/picture/price_recent.png)
 ![Figure 3: The DFA exponent for Bitcoin daily returns in different sizes and steps](/picture/dfa.jpg)
 ## 4. Conclusion
