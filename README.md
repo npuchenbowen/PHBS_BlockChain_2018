@@ -71,13 +71,16 @@ where R_t is the return of Bitcoin and P_t and P_{t-1} represent the Bitcoin pri
 
 Table 1 show that the statistical characteristics of different exchanges tend to be similar. We can see that the \ln{\left(P_t\right)} in Coinbase, Exmo and Binance has negative Kurtosis and positive Skewness which means that the concentration of \ln{\left(P_t\right)} is not high and there are some extremely high values. The R_t in Coinbase, Exmo and Binance Exchanges has positive Kurtosis which is slightly larger than 3 and negative Skewness which is close to zero. Therefore, the distribution of \mathbit{R}_\mathbit{t} is approximate to normal distribution. Additionally, the standard deviation of R_t in Exmo is lower than R_t in Coinbase and Binance. Therefore, Exmo is less risky than the other two Exchanges and investors with different risk tolerances can invest in different exchanges. 
 
-Variable	Sample Period	N	Mean	SD	MAX	Min	Kurt	Skew
-ln\left(P_t\right) of Coinbase	2017.8.18-2019.4.26	617	8.7603	0.4106	9.8780	8.0567	-0.3673	0.3919
-R_t of Coinbase	2017.8.18-2019.4.26	616	0.0387	4.4387	22.5119	-20.7530	3.5997	-0.0413
-ln\left(P_t\right) of Exmo	2017.8.18-2019.4.26	617	8.7700	0.4125	9.8679	8.0994	-0.3677	0.4381
-R_t of Exmo	2017.8.18-2019.4.26	616	0.0425	3.9924	19.0235	-18.0279	4.0970	-0.0375
-ln\left(P_t\right) of Binance	2017.8.18-2019.4.26	617	8.7541	0.4077	9.8576	8.0675	-0.4340	0.3451
-R_t of Binance	2017.8.18-2019.4.26	616	0.0415	4.4975	20.2952	-21.6880	3.4366	-0.2563
+
+Table 1: The Descriptive Statistics Characters of Bitcoin in Coinbase, Exmo and Binance Exchanges
+Variable|	Sample Period|	N|	Mean|	SD|	MAX|	Min|	Kurt|	Skew|
+|-------|:---:|-----------|-------:|
+ln\left(P_t\right) of Coinbase|	2017.8.18-2019.4.26|	617|	8.7603|	0.4106|	9.8780|	8.0567|	-0.3673|	0.3919|
+R_t of Coinbase|	2017.8.18-2019.4.26|	616|	0.0387|	4.4387|	22.5119|	-20.7530|	3.5997|	-0.0413|
+ln\left(P_t\right) of Exmo|	2017.8.18-2019.4.26|	617|	8.7700|	0.4125|	9.8679|	8.0994|	-0.3677|	0.4381|
+R_t of Exmo|	2017.8.18-2019.4.26|	616|	0.0425|	3.9924|	19.0235|	-18.0279|	4.0970|	-0.0375|
+ln\left(P_t\right) of Binance|	2017.8.18-2019.4.26|	617|	8.7541|	0.4077|	9.8576|	8.0675	|-0.4340|	0.3451|
+R_t of Binance|	2017.8.18-2019.4.26|	616|	0.0415|	4.4975|	20.2952|	-21.6880|	3.4366|	-0.2563|
 
 In Figure 3, this paper shows the DFA exponent for Bitcoin daily returns in different sizes and steps. Firstly, the DFA exponent is larger than 0.5 in all three Exchanges and it means that there exists long-term memory in the Bitcoin return time series. Secondly, with the increasing of size, the DFA exponent declines and becomes less volatile than using the small size. When we increase the size larger than 300, the DFA exponent is close to 0.5 which indicates that it can nearly be described by random walks. In the long run, Exmo’s DFA exponent is higher than the other two exchanges and it means more inefficient. Additionally, we did a robustness test by changing the step of the rolling window method and the result is the same.
 
